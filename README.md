@@ -2,9 +2,9 @@
 
 I hid my APIKey in a separate file.  To make this work, create a folder in `src` called `APIKey`.  In the `APIKey` folder, create a file called `index.js` and enter the following information:
 
-    const StravaKey = '__ENTER YOUR API KEY HERE__'
+```    const StravaKey = '__ENTER YOUR API KEY HERE__'```
 
-    export default StravaKey;
+```export default StravaKey;```
 
 The `APIKey` folder has been included in the `.gitignore` file so as to not publish the key in my repo
 
