@@ -1,4 +1,4 @@
-** setup notes **
+**setup notes**
 
 I hid my APIKey in a separate file.  To make this work, create a folder in `src` called `APIKey`.  In the `APIKey` folder, create a file called `index.js` and enter the following information:
 
