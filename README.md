@@ -1,15 +1,53 @@
-**setup notes**
+# Packfiller
 
-I hid my APIKey in a separate file.  To make this work, create a folder in `src` called `APIKey`.  In the `APIKey` folder, create a file called `index.js` and enter the following information:
+## Epicodus React Capstone Project
 
-```    const StravaKey = '__ENTER YOUR API KEY HERE__'```
+##### September 21, 2018
 
-```export default StravaKey;```
+#### By Matt Smith
 
-The `APIKey` folder has been included in the `.gitignore` file so as to not publish the key in my repo
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-*generated README text follows*
-________
+## Description
+
+I’ve moved around quite a bit in the last few years.  While I’ve been successful using sites such as RideWithGPS and Strava heat maps to find routes, riding with a group (not unlike pair programming) is more beneficial than going at it solo because of the comradery and encouragement of others.  This app will compare a user’s RideWithGPS fitness data and compare one’s fitness level with that of other riders in the area.  Presumably one could then initiate rides with others without a mismatch in ability that would be frustrating to both riders.
+
+When I was racing bikes up until last year, I was mediocre at best and usually finished mid pack.  The term for that is packfill, and I figured it was a cute play on words that I'm actually trying to build a pack of riders as opposed to trying to ride away from them
+
+**NOTE**: in the interest of creating a viable MVP, the project's aim may alter slightly.  Strava does not allow for querying users by their data unless those users have opted in.  If a viable workaround cannot be established, I will shift focus to a [feature](#Additional-features)
+
+##### List the absolute minimum features the project requires to meet this purpose or goal:
+
+1. The app must be able to take in and distill a user’s data to determine a metric by which to measure their fitness level (ie, average speed, average distance)
+1. The app must be able to determine where a user usually rides and using the average distance, find other riders in the general area
+The app will compile a list of riders in the area that would be a good match fitness wise for the user to invite on rides
+
+##### What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
+
+1. React and/or Angular for the front end.
+1. Strava API and RideWithGPS API (I finally got the RideWithGPS API after bugging them for a few days)
+1. Potentially a database in firebase if I create a feature that allows one to save their results
+
+##### Additional features.
+
+1. A route planner that lets a user know about features on the route (ie, bike shops, restrooms, bars, coffeehouses, etc)
+1. Further filters and refinement.  Set up friendly competitions?  Add additional fitness metrics
+1. A calendar-esque app to set up rides in advance
+1. A filter to filter by gender.  I might be opening up a can of worms here, but I’m thinking to filter either “I’d prefer to ride with other (wo)men” or “I don’t mind riding in mixed groups”. There will not be a feature to choose to ride with the opposite sex because this isn’t Tinder.
+1. Strava has additional metrics to measure ride difficulty.  Perhaps tie something in with Spotify to make an aggressive playlist (for more difficult rides) or a more chill playlist (for more leisurely rides) based on a user’s playlists.
+1. A database where results can be stored
+
+##### What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
+* Spotify API
+* GeoTracker and Google APIs (to find points of interest on a route)
+* Firebase
+
+##### Is there anything else you’d like your instructor to know?
+
+Strava locks down a user’s data, but that data is coming from a GPS source which is all collated on a number of different sites such as RideWithGPS, MapMyRide, Garmin.  Even if it ends up that I can’t feasibly seek out and compare another rider’s fitness level with the user’s, I’m fairly confident that I can fetch a user’s ride data and do something fun with it.
+
+**Generated README content follows**
+_____
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
